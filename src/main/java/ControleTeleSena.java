@@ -1,7 +1,10 @@
-public class ControleTeleSena {
-    Pessoa[] pessoa = new Pessoa[20];
+public class ControleTeleSena extends TeleSena {
+    Pessoa[] pessoa;
+    int vendas = 0;
 
-    public ControleTeleSena(Pessoa[] pessoa) {
+
+    public ControleTeleSena(Pessoa[] pessoa, double valorVenda,int [] t1, int [] t2) {
+        super(valorVenda);
         this.pessoa = pessoa;
 
         pessoa[0] = new Pessoa("Pedro");
@@ -25,5 +28,21 @@ public class ControleTeleSena {
         pessoa[18] = new Pessoa("Adriano");
         pessoa[19] = new Pessoa("Marcos");
     }
+
+
+    public void comprarTeleSena(){
+        for (int i = 0; i<pessoa.length;i++){
+            for (int c =0;c<pessoa[i].getTelesena().length;i++){
+                vendas = vendas + 10;
+            }
+        }
+        System.out.println(vendas);
+
+
+
+
+        }
+
+
 
 }
