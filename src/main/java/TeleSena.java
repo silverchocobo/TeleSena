@@ -14,5 +14,17 @@ public class TeleSena {
         this.t2 = new int[25];
     }
 
+    public void sortear(){
+        for (int i=0;i< t1.length;i++){
+            t1[i] = (int)(Math.random() * 60 + 1);
+        }
+        System.out.println(java.util.Arrays.toString(t1));
+        for (int i=0;i< t2.length;i++){
+            t2[i] = (int)(Math.random() * 60 + 1);
+        }
+        System.out.println(java.util.Arrays.toString(t2));
+
+    }
+
 
 }
