@@ -1,30 +1,32 @@
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+public class ControleTeleSena {
+    private Pessoa[] pessoa = new Pessoa[20];
+    private int vendas = 0;
 
-public class TeleSena {
-    private double valorVenda = 10;
-    private int[] t1;
-    private int[] t2;
+    public ControleTeleSena() {
+        this.pessoa = pessoa;
+        NomePessoa[] nomePessoas = NomePessoa.values();
 
-    public TeleSena(double valorVenda) {
-        this.valorVenda = valorVenda;
-        this.t1 = new int[25];
-        this.t2 = new int[25];
+        for (int i=0; i<20; i++) {
+            int quantidadeTelesenasPessoa = (int)(Math.random() * 15 + 1);
+            pessoa[i] = new Pessoa(nomePessoas[i], quantidadeTelesenasPessoa);
+
+        }
+
+
     }
 
-    public void sortear(){
-        for (int i=0;i< t1.length;i++){
-            t1[i] = (int)(Math.random() * 60 + 1);
+    public void comprarTeleSena(){
+        for (int i = 0; i<pessoa.length;i++){
+            for (int c =0;c<pessoa[i].getTelesenas().length;i++){
+                vendas = vendas + 10;
+            }
         }
-        System.out.println(java.util.Arrays.toString(t1));
-        for (int i=0;i< t2.length;i++){
-            t2[i] = (int)(Math.random() * 60 + 1);
-        }
-        System.out.println(java.util.Arrays.toString(t2));
-
+        System.out.println(vendas);
     }
+
 
 
 }
