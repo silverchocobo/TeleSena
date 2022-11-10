@@ -1,29 +1,30 @@
-public class ControleTeleSena {
-    Pessoa[] pessoa = new Pessoa[20];
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-    public ControleTeleSena(Pessoa[] pessoa) {
-        this.pessoa = pessoa;
+@Data
 
-        pessoa[0] = new Pessoa("Pedro");
-        pessoa[1] = new Pessoa("João");
-        pessoa[2] = new Pessoa("Pedro");
-        pessoa[3] = new Pessoa("Maria");
-        pessoa[4] = new Pessoa("Rodolfo");
-        pessoa[5] = new Pessoa("Agatha");
-        pessoa[6] = new Pessoa("Suzana");
-        pessoa[7] = new Pessoa("Gabriel");
-        pessoa[8] = new Pessoa("Luís");
-        pessoa[9] = new Pessoa("Leonardo");
-        pessoa[10] = new Pessoa("Gabriel");
-        pessoa[11] = new Pessoa("Joana");
-        pessoa[12] = new Pessoa("Janaína");
-        pessoa[13] = new Pessoa("Mariana");
-        pessoa[14] = new Pessoa("Daiana");
-        pessoa[15] = new Pessoa("Camila");
-        pessoa[16] = new Pessoa("Bruno");
-        pessoa[17] = new Pessoa("Igor");
-        pessoa[18] = new Pessoa("Adriano");
-        pessoa[19] = new Pessoa("Marcos");
+public class TeleSena {
+    private double valorVenda = 10;
+    private int[] t1;
+    private int[] t2;
+
+    public TeleSena(double valorVenda) {
+        this.valorVenda = valorVenda;
+        this.t1 = new int[25];
+        this.t2 = new int[25];
     }
+
+    public void sortear(){
+        for (int i=0;i< t1.length;i++){
+            t1[i] = (int)(Math.random() * 60 + 1);
+        }
+        System.out.println(java.util.Arrays.toString(t1));
+        for (int i=0;i< t2.length;i++){
+            t2[i] = (int)(Math.random() * 60 + 1);
+        }
+        System.out.println(java.util.Arrays.toString(t2));
+
+    }
+
 
 }
