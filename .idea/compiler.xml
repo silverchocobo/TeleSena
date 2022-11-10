@@ -10,5 +10,8 @@
         <module name="TeleSena" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TS" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
