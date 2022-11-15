@@ -28,3 +28,4 @@ public enum NomePessoa {
         this.nome = nome;
     }
 }
+
